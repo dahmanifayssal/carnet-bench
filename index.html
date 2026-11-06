@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Carnet Bench</title>
+<meta name="theme-color" content="#1d48c9">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><h1>Carnet <span>Bench</span></h1><div class="block" id="block"></div></div>
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="seance" aria-selected="true">Séance</button>
+      <button role="tab" data-tab="progres" aria-selected="false">Progrès</button>
+      <button role="tab" data-tab="bilan" aria-selected="false">Bilan</button>
+    </div>
+    <div class="weekbar" id="weekbar">
+      <button class="iconbtn" id="prevWk" aria-label="Semaine précédente">‹</button>
+      <div class="wk" id="wkLabel"></div>
+      <button class="iconbtn" id="nextWk" aria-label="Semaine suivante">›</button>
+    </div>
+  </header>
+  <main id="view"><div class="empty"><b>Chargement du programme…</b>Ton programme arrive.</div></main>
+  <p class="foot"><a href="coach.html">Mode coach</a></p>
+</div>
+
+<div class="dock" id="dock" aria-live="polite">
+  <div class="t" id="dockT">0:00</div>
+  <div class="w" id="dockW">Repos</div>
+  <button id="dockPlus">+30 s</button>
+  <button id="dockStop">Stop</button>
+</div>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+<script src="common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
